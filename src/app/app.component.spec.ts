@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'PlatziStore2'`, () => {
+  it(`should have as title 'PlatziStore'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('PlatziStore2');
+    expect(app.title).toEqual('PlatziStore');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('PlatziStore2 app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('PlatziStore app is running!');
   });
 });
