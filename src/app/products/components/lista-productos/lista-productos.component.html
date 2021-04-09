@@ -1,0 +1,19 @@
+<h3> Lista General </h3>
+
+<div *ngIf="products.length === 0; then nada else lista">
+</div>
+
+<ng-template #nada>
+    <p><strong>Perdon, no se encontraron productos</strong></p>
+</ng-template>
+
+<ng-template #lista>
+    <div class="lista-producto">
+        <app-product 
+            *ngFor="let product of products" 
+            [product]="product"
+            (clicked)="productClicked($event)"
+            (deleteProductClick)="deleteProduct($event)">
+        </app-product>
+    </div>
+</ng-template>

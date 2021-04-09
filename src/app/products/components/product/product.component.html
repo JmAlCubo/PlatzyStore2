@@ -1,0 +1,18 @@
+<mat-card>
+    <div class="selectionProducto" mat-raised-button routerLink="/products/{{ product.id }}">
+        <mat-card-header>
+            <mat-card-title> {{ product.title | uppercase }} </mat-card-title>
+            <mat-card-subtitle> {{ product.price | currency }} </mat-card-subtitle>
+        </mat-card-header>
+        <div class="crop-image">
+            <img [src]="product.image" alt="{{ product.image }}">
+        </div>
+        <mat-card-content>
+                <p> {{ product.description | slice:0:10 }} </p>
+        </mat-card-content>
+    </div>
+    <mat-card-actions>
+        <button (click)="addCart()" mat-raised-button>Agregar al carrito</button>
+        <button (click)="deleteProduct()" mat-raised-button color="warn">Eliminar Producto</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,26 @@
+mat-toolbar {
+    background-color: #6f0000;
+}
+.main-nav__item {
+    display: inline-block;
+}
+
+.main-nav__item:hover {
+    background-color: #00000058;
+}
+
+.main-nav__item:active {
+    background-color: #00000025;
+}
+
+.main-nav__item a::after {
+    content: " | ";
+}
+
+.main-nav__item a {
+    color: #ffffff;
+    padding: 1.4rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}

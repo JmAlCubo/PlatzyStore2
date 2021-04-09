@@ -1,0 +1,64 @@
+<form [formGroup]="formularioProducto" novalidate (ngSubmit)="onSubmit($event)">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Agregar Nuevo Producto</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="ID" formControlName="id">
+            <mat-error *ngIf="formularioProducto.controls['id'].hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Título" formControlName="title">
+            <mat-error *ngIf="formularioProducto.controls['title'].hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Precio" formControlName="price">
+            <mat-error *ngIf="formularioProducto.controls['price'].hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Descripción" formControlName="description">
+            <mat-error *ngIf="formularioProducto.controls['description'].hasError('required')">
+              Last name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="imagen" formControlName="image"></textarea>
+            <mat-error *ngIf="formularioProducto.controls['image'].hasError('required')">
+              Address is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div *ngIf="updateProduct === undefined ; then agregar else editar"></div>
+      <ng-template #agregar>
+        <button mat-raised-button color="primary" type="submit">Agregar</button>
+      </ng-template>
+      <ng-template #editar>
+        <button mat-raised-button color="primary" type="submit">editar</button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+</form>

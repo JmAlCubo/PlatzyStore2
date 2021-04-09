@@ -1,0 +1,20 @@
+div {
+  border: 0.5rem dotted black;
+  margin: 20rem 30rem;
+  padding: 8rem;
+}
+
+div h1 {
+  font-size: 5rem;
+  display: inline;
+}
+
+div h1::after {
+  content: "/";
+  font-size: 10rem;
+}
+
+div h2 {
+  font-size: 3rem;
+  display: inline;
+}

@@ -1,0 +1,4 @@
+@import '~swiper/swiper-bundle.css';
+.swiper-container {
+    width: 100%;
+}
